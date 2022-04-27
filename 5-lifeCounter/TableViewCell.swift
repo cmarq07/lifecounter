@@ -68,7 +68,7 @@ class TableViewCell: UITableViewCell {
     @IBAction func minusXPressed(_ sender: Any) {
         let xAmount = minusXInput.text!
         
-        player.add(Int(xAmount)!)
+        player.subtract(Int(xAmount)!)
         
         scoreLabel.text = "Score \(player.score)"
     }

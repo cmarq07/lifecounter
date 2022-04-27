@@ -41,6 +41,9 @@
                                                                         <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                         <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                                     </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="plus1Pressed:" destination="eAo-qN-Kaw" eventType="touchUpInside" id="aRq-wa-R5K"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -54,6 +57,9 @@
                                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                                     </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="minus1Pressed:" destination="eAo-qN-Kaw" eventType="touchUpInside" id="a0L-Tz-vTz"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,6 +100,9 @@
                                                                         <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                         <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                                     </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="plusXPressed:" destination="eAo-qN-Kaw" eventType="touchUpInside" id="GOh-o5-9sY"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAR-Hd-qsq">
                                                                     <rect key="frame" x="56" y="0.0" width="37" height="34"/>
@@ -116,6 +125,9 @@
                                                                         <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                         <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                                     </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="minusXPressed:" destination="eAo-qN-Kaw" eventType="touchUpInside" id="kLp-wq-bO8"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sA2-yl-0g4">
                                                                     <rect key="frame" x="56" y="0.0" width="37" height="34"/>
