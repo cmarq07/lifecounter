@@ -40,7 +40,8 @@ class TableViewCell: UITableViewCell {
         player = nil
     }
     
-    func configureCell() {
+    func configureCell(_ num : Int) {
+        playerNameLabel.text = "Player \(num)"
         scoreLabel.text = "Score \(player.score)"
     }
     

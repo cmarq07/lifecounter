@@ -16,8 +16,17 @@ class ViewController: UIViewController {
         Player(score: 20)
     ]
     
+    @IBAction func addPlayer(_ sender: Any) {
+        
+        allPlayers.append(Player(score: 20))
+        tableView.reloadData()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.backgroundColor = UIColor.clear
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,7 +51,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell {
             cell.player = allPlayers[indexPath.section]
-            cell.configureCell()
+            cell.configureCell(indexPath.section + 1)
             return cell
         }
         
