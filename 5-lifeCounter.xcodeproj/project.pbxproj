@@ -18,6 +18,7 @@
 		0A568C82280F8C22001F0D40 /* __lifeCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A568C81280F8C22001F0D40 /* __lifeCounterUITestsLaunchTests.swift */; };
 		0AE2D33F281904E10009C86F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2D33E281904E10009C86F /* TableViewCell.swift */; };
 		0AE2D341281906AB0009C86F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2D340281906AB0009C86F /* Player.swift */; };
+		0AE2D3432819CBEE0009C86F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2D3422819CBEE0009C86F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0A568C81280F8C22001F0D40 /* __lifeCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __lifeCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0AE2D33E281904E10009C86F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0AE2D340281906AB0009C86F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0AE2D3422819CBEE0009C86F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0A568C5E280F8C21001F0D40 /* AppDelegate.swift */,
 				0A568C60280F8C21001F0D40 /* SceneDelegate.swift */,
 				0A568C62280F8C21001F0D40 /* ViewController.swift */,
+				0AE2D3422819CBEE0009C86F /* HomeViewController.swift */,
 				0AE2D33E281904E10009C86F /* TableViewCell.swift */,
 				0AE2D340281906AB0009C86F /* Player.swift */,
 				0A568C64280F8C21001F0D40 /* Main.storyboard */,
@@ -269,6 +272,7 @@
 				0A568C5F280F8C21001F0D40 /* AppDelegate.swift in Sources */,
 				0AE2D341281906AB0009C86F /* Player.swift in Sources */,
 				0A568C61280F8C21001F0D40 /* SceneDelegate.swift in Sources */,
+				0AE2D3432819CBEE0009C86F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
