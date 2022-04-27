@@ -8,10 +8,16 @@
 class Player {
     // Player's score
     var score: Int
+    var name : String
     
     // Initialize the player's score
     init(score: Int) {
         self.score = score
+        self.name = "Player"
+    }
+    
+    func setName(_ givenName : String) {
+        self.name = givenName
     }
     
     func add() {

@@ -36,13 +36,10 @@ class HomeViewController: UIViewController {
         if segue.destination is ViewController {
             let vc = segue.destination as? ViewController
             var players : [Player] = []
-            print(numPlayers)
             for _ in 0..<numPlayers {
                 players.append(Player(score: 20))
             }
             vc?.allPlayers = players
         }
     }
-
-
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TableViewCellDelegate: UITableViewDelegate {
+    func updateHistory(historyText: String)
+}
+
 class TableViewCell: UITableViewCell {
     // Buttons References
     @IBOutlet weak var plus1Button: UIButton!
@@ -17,13 +21,16 @@ class TableViewCell: UITableViewCell {
     // Input References
     @IBOutlet weak var plusXInput: UITextField!
     @IBOutlet weak var minusXInput: UITextField!
+    @IBOutlet weak var playerNameInput: UITextField!
     
     // Labels
-    @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
     // Player
     var player: Player!
+    
+    // Delegate
+    weak var delegate: TableViewCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,19 +48,22 @@ class TableViewCell: UITableViewCell {
     }
     
     func configureCell(_ num : Int) {
-        playerNameLabel.text = "Player \(num)"
+        player.setName("Player \(num)")
+        playerNameInput.text = "Player \(num)"
         scoreLabel.text = "Score \(player.score)"
     }
     
     // Actions
     @IBAction func plus1Pressed(_ sender: Any) {
         player.add()
+        delegate.updateHistory(historyText: "\(player.name) gained 1 life")
         
         scoreLabel.text = "Score \(player.score)"
     }
     
     @IBAction func minus1Pressed(_ sender: Any) {
         player.subtract()
+        delegate.updateHistory(historyText: "\(player.name) lost 1 life")
         
         scoreLabel.text = "Score \(player.score)"
     }
@@ -62,6 +72,7 @@ class TableViewCell: UITableViewCell {
         let xAmount = plusXInput.text!
         
         player.add(Int(xAmount)!)
+        delegate.updateHistory(historyText: "\(player.name) gained \(xAmount) lives")
         
         scoreLabel.text = "Score \(player.score)"
     }
@@ -70,7 +81,17 @@ class TableViewCell: UITableViewCell {
         let xAmount = minusXInput.text!
         
         player.subtract(Int(xAmount)!)
+        delegate.updateHistory(historyText: "\(player.name) lost \(xAmount) lives")
+        
         
         scoreLabel.text = "Score \(player.score)"
+    }
+    
+    @IBAction func playerNameChanged(_ sender: Any) {
+        player.setName(playerNameInput.text!)
+    }
+    
+    func checkGameOver() {
+        
     }
 }

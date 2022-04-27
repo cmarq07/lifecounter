@@ -16,22 +16,27 @@ class ViewController: UIViewController {
         Player(score: 20)
     ]
     
+    var history: [String] = []
+    
     @IBAction func addPlayer(_ sender: Any) {
-        
         allPlayers.append(Player(score: 20))
         tableView.reloadData()
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(allPlayers)
-        
         tableView.backgroundColor = UIColor.clear
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is HistoryViewController {
+            let vc = segue.destination as? HistoryViewController
+            vc?.history = history
+        }
     }
 }
 
@@ -54,6 +59,8 @@ extension ViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell {
             cell.player = allPlayers[indexPath.section]
             cell.configureCell(indexPath.section + 1)
+            cell.delegate = self
+            
             return cell
         }
         
@@ -61,3 +68,8 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+extension ViewController: TableViewCellDelegate {
+    func updateHistory(historyText: String) {
+        history.append(historyText)
+    }
+}
