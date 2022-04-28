@@ -234,17 +234,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" id="0Ws-bS-cvm" customClass="HistoryTableViewCell" customModule="__lifeCounter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Ws-bS-cvm" id="Hef-gf-gFj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wGt-oY-Pf7">
-                                                    <rect key="frame" x="16" y="11" width="158.5" height="20.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wGt-oY-Pf7">
+                                                    <rect key="frame" x="16" y="11" width="158.5" height="21"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Player did X Action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vno-eI-VwX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="158.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="158.5" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -252,6 +252,11 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wGt-oY-Pf7" firstAttribute="centerY" secondItem="Hef-gf-gFj" secondAttribute="centerY" id="QMi-q2-bqA"/>
+                                                <constraint firstItem="wGt-oY-Pf7" firstAttribute="top" secondItem="Hef-gf-gFj" secondAttribute="topMargin" id="QtF-D2-LDU"/>
+                                                <constraint firstItem="wGt-oY-Pf7" firstAttribute="leading" secondItem="Hef-gf-gFj" secondAttribute="leadingMargin" id="k9x-r5-uVx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellLabel" destination="vno-eI-VwX" id="xzH-Kn-DvT"/>
@@ -263,10 +268,10 @@
                         <viewLayoutGuide key="safeArea" id="FOr-pa-afg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="leading" secondItem="FOr-pa-afg" secondAttribute="leading" id="Ddy-3D-wLa"/>
-                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="bottom" secondItem="FOr-pa-afg" secondAttribute="bottom" id="DwN-MT-AeW"/>
-                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="top" secondItem="FOr-pa-afg" secondAttribute="top" id="ec1-Us-GRI"/>
-                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="centerX" secondItem="FOv-Fq-qum" secondAttribute="centerX" id="rGg-Gu-eKX"/>
+                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="bottom" secondItem="FOr-pa-afg" secondAttribute="bottom" id="Gef-BS-EeH"/>
+                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="centerX" secondItem="FOv-Fq-qum" secondAttribute="centerX" id="HDP-xf-xlo"/>
+                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="leading" secondItem="FOr-pa-afg" secondAttribute="leading" id="byQ-EJ-haM"/>
+                            <constraint firstItem="YyU-Ws-jf1" firstAttribute="top" secondItem="FOr-pa-afg" secondAttribute="top" id="gFJ-kx-giN"/>
                         </constraints>
                     </view>
                     <connections>

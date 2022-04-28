@@ -91,7 +91,8 @@ class TableViewCell: UITableViewCell {
         player.setName(playerNameInput.text!)
     }
     
-    func checkGameOver() {
-        
+    func checkPlayerOut() {
+        if(player.score <= 0) {
+        }
     }
 }
