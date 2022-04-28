@@ -9,6 +9,7 @@ import UIKit
 
 protocol TableViewCellDelegate: UITableViewDelegate {
     func updateHistory(historyText: String)
+    func checkGameOver()
 }
 
 class TableViewCell: UITableViewCell {
@@ -64,6 +65,7 @@ class TableViewCell: UITableViewCell {
     @IBAction func minus1Pressed(_ sender: Any) {
         player.subtract()
         delegate.updateHistory(historyText: "\(player.name) lost 1 life")
+        checkPlayerOut()
         
         scoreLabel.text = "Score \(player.score)"
     }
@@ -82,7 +84,7 @@ class TableViewCell: UITableViewCell {
         
         player.subtract(Int(xAmount)!)
         delegate.updateHistory(historyText: "\(player.name) lost \(xAmount) lives")
-        
+        checkPlayerOut()
         
         scoreLabel.text = "Score \(player.score)"
     }
@@ -93,6 +95,19 @@ class TableViewCell: UITableViewCell {
     
     func checkPlayerOut() {
         if(player.score <= 0) {
+            player.setOut()
+            delegate.updateHistory(historyText: "\(player.name) is out")
+            scoreLabel.text = "0"
+            
+            plus1Button.isUserInteractionEnabled = false
+            minus1Button.isUserInteractionEnabled = false
+            plusXButton.isUserInteractionEnabled = false
+            minusXButton.isUserInteractionEnabled = false
+            
+            plusXInput.isUserInteractionEnabled = false
+            minusXInput.isUserInteractionEnabled = false
+            
+            delegate.checkGameOver()
         }
     }
 }
